@@ -1,0 +1,169 @@
+/* 
+  Custom CSS for Sumber Belajar Matematika
+  Academic Theme + Mobile Responsive Optimization
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Montserrat:wght@500;600;700&display=swap');
+
+:root {
+  --color-topbar: #1A2C43;
+  --color-header: #073C64;
+  --color-nav-active: #121F33;
+  --color-accent-yellow: #FDCB2C;
+  --color-accent-cyan: #149fc0;
+  --color-footer: #073C64;
+  --color-footer-dark: #1A2C43;
+}
+
+/* Base Typography */
+html {
+  font-size: 14px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 1.71429;
+  color: #222222;
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: "Lora", Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  color: #073C64;
+  word-break: break-word;
+}
+
+.font-brand {
+  font-family: "Montserrat", "Open Sans", sans-serif;
+}
+
+/* MathJax & Formula Responsive Touch Scroll */
+div.MathJax_Display, .mjx-display-page, .MathJax_CHTML {
+  margin: 1.25em 0 !important;
+  padding: 0.85em 1em;
+  background-color: #f8fafc;
+  border-left: 4px solid var(--color-accent-yellow);
+  border-radius: 4px;
+  overflow-x: auto !important;
+  overflow-y: hidden;
+  max-width: 100% !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Mobile specific formula sizing */
+@media (max-width: 640px) {
+  div.MathJax_Display, .mjx-display-page {
+    padding: 0.65em 0.75em;
+    font-size: 92% !important;
+  }
+}
+
+/* Prevent auto-zoom on iOS inputs & optimize touch targets */
+input[type="text"], input[type="search"], select, button {
+  font-size: 16px !important;
+}
+
+@media (min-width: 641px) {
+  input[type="text"], input[type="search"], select, button {
+    font-size: 14px !important;
+  }
+}
+
+/* Header & Navigation Styling */
+.topbar-bg {
+  background-color: var(--color-topbar);
+}
+
+.header-bg {
+  background-color: var(--color-header);
+}
+
+.nav-bg {
+  background-color: var(--color-header);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 3px solid var(--color-accent-yellow);
+}
+
+.nav-link-active {
+  background-color: var(--color-nav-active) !important;
+  color: var(--color-accent-yellow) !important;
+  font-weight: 700;
+}
+
+.nav-link-item:hover {
+  color: var(--color-accent-yellow) !important;
+  background-color: rgba(18, 31, 51, 0.6);
+}
+
+/* Mobile Navigation Drawer Animation */
+#mobile-menu {
+  transition: all 0.25s ease-in-out;
+}
+
+.touch-target {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+/* Cards & Responsive Layout */
+.materi-card {
+  transition: all 0.2s ease-in-out;
+  border: 1px solid #e2e8f0;
+}
+
+.materi-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(7, 60, 100, 0.08);
+  border-color: var(--color-accent-yellow);
+}
+
+.widget-title-border {
+  border-bottom: 3px solid var(--color-accent-yellow);
+}
+
+/* Article typography for mobile readability */
+article p, article li {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+@media (max-width: 640px) {
+  article {
+    text-align: left !important;
+  }
+}
+
+/* Table Responsive Scrolling */
+.table-responsive-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
