@@ -37,11 +37,10 @@
                 <span class="text-slate-500">|</span>
                 <span class="text-slate-300 truncate">Portal Pembelajaran Akademis</span>
             </div>
-            <div class="flex items-center space-x-2">
-                <div class="flex items-center space-x-1.5 bg-blue-950/60 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded border border-blue-800">
-                    <span class="w-2 h-2 rounded-full bg-[#FDCB2C]"></span>
-                    <span class="font-medium text-slate-200 text-[11px]">Bahasa Indonesia</span>
-                </div>
+            <div class="flex items-center space-x-3 text-slate-300">
+                <span>SMA Kelas X, XI, XII</span>
+                <span class="text-slate-500">&bull;</span>
+                <span>OSN &amp; UTBK</span>
             </div>
         </div>
     </div>
@@ -79,7 +78,7 @@
             <div class="hidden sm:flex items-center space-x-1" id="nav-links">
                 <a href="index.html" class="py-3.5 px-6 nav-link-active transition uppercase tracking-wider">HOME</a>
                 <a href="#materi" class="py-3.5 px-6 text-slate-100 nav-link-item transition uppercase tracking-wider">MATERI</a>
-                <a href="#tentang" class="py-3.5 px-6 text-slate-100 nav-link-item transition uppercase tracking-wider">TENTANG</a>
+                <a href="tentang.html" class="py-3.5 px-6 text-slate-100 nav-link-item transition uppercase tracking-wider">TENTANG</a>
             </div>
 
             <!-- Mobile Navbar Header Title & Hamburger Button -->
@@ -97,7 +96,7 @@
         <div id="mobile-menu" class="hidden sm:hidden bg-[#121F33] border-t border-blue-900 px-3 py-2 space-y-1">
             <a href="index.html" class="block py-3 px-4 text-[#FDCB2C] font-bold bg-[#073C64] rounded text-xs uppercase tracking-wider">HOME</a>
             <a href="#materi" class="block py-3 px-4 text-slate-100 hover:text-[#FDCB2C] rounded text-xs uppercase tracking-wider">MATERI</a>
-            <a href="#tentang" class="block py-3 px-4 text-slate-100 hover:text-[#FDCB2C] rounded text-xs uppercase tracking-wider">TENTANG</a>
+            <a href="tentang.html" class="block py-3 px-4 text-slate-100 hover:text-[#FDCB2C] rounded text-xs uppercase tracking-wider">TENTANG</a>
         </div>
     </nav>
 
@@ -122,31 +121,37 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                         </svg>
                     </a>
-                    <a href="#tentang" class="inline-flex justify-center items-center px-5 py-3 rounded bg-white hover:bg-slate-50 text-[#073C64] font-semibold text-xs transition border border-slate-300 w-full sm:w-auto">
-                        Tentang Portal Ini
+                    <a href="tentang.html" class="inline-flex justify-center items-center px-5 py-3 rounded bg-white hover:bg-slate-50 text-[#073C64] font-semibold text-xs transition border border-slate-300 w-full sm:w-auto">
+                        Tentang Pengembang &amp; Portal
                     </a>
                 </div>
             </div>
             
             <!-- Academic Highlights Box -->
-            <div class="lg:col-span-4 bg-white p-5 sm:p-6 rounded border border-slate-200 shadow-sm border-t-4 border-t-[#FDCB2C] mt-2 lg:mt-0">
-                <h3 class="font-bold font-['Lora',serif] text-[#073C64] text-base mb-3 border-b border-slate-200 pb-2">
+            <div class="lg:col-span-4 bg-white p-5 sm:p-6 rounded border border-slate-200 shadow-sm border-t-4 border-t-[#FDCB2C] mt-2 lg:mt-0 space-y-3">
+                <h3 class="font-bold font-['Lora',serif] text-[#073C64] text-base border-b border-slate-200 pb-2">
                     Fokus Pembelajaran
                 </h3>
                 <ul class="space-y-3 text-xs text-slate-700">
                     <li class="flex items-start space-x-2.5">
-                        <span class="text-[#149fc0] font-bold text-base leading-none">&bull;</span>
-                        <span><strong>Definisi & Sifat:</strong> Penyajian landasan teori matematis yang presisi.</span>
+                        <span class="text-[#073C64] font-bold text-base leading-none">&bull;</span>
+                        <span><strong>Matematika SMA:</strong> Materi lengkap jenjang Kelas X, XI, dan XII.</span>
+                    </li>
+                    <li class="flex items-start space-x-2.5">
+                        <span class="text-amber-600 font-bold text-base leading-none">&bull;</span>
+                        <span><strong>Persiapan Olimpiade (OSN):</strong> Pembinaan soal non-rutin &amp; problem solving.</span>
                     </li>
                     <li class="flex items-start space-x-2.5">
                         <span class="text-[#149fc0] font-bold text-base leading-none">&bull;</span>
-                        <span><strong>Notasi LaTeX:</strong> Rumus disajikan dalam bentuk standar internasional.</span>
-                    </li>
-                    <li class="flex items-start space-x-2.5">
-                        <span class="text-[#149fc0] font-bold text-base leading-none">&bull;</span>
-                        <span><strong>Pembahasan Terstruktur:</strong> Solusi analitis dan latihan soal mandiri.</span>
+                        <span><strong>Persiapan UTBK - SNBT:</strong> Drilling Penalaran Matematika &amp; Kuantitatif.</span>
                     </li>
                 </ul>
+                <div class="pt-2 border-t border-slate-100 flex justify-between items-center text-xs">
+                    <span class="text-slate-500">Oleh: Toriq Afanudin</span>
+                    <a href="tentang.html" class="font-semibold text-[#149fc0] hover:text-[#073C64]">
+                        Detail &rarr;
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -299,67 +304,63 @@
         </div>
     </main>
 
-    <!-- Tentang Section -->
-    <section id="tentang" class="bg-slate-50 border-t border-slate-200 py-8 sm:py-12 px-4 sm:px-8">
+    <!-- Tentang Pengembang & Platform Section (Teaser to Standalone Page) -->
+    <section class="bg-slate-50 border-t border-slate-200 py-8 sm:py-12 px-4 sm:px-8">
         <div class="max-w-7xl mx-auto space-y-6 sm:space-y-8">
-            <div class="border-b-2 border-[#FDCB2C] pb-3">
-                <span class="text-[11px] sm:text-xs font-bold text-[#149fc0] uppercase tracking-wider block mb-1">Informasi Portal</span>
-                <h2 class="text-xl sm:text-3xl font-bold font-['Lora',serif] text-[#073C64]">
-                    Tentang Sumber Belajar Matematika
-                </h2>
+            <div class="flex flex-col md:flex-row md:items-end justify-between border-b-2 border-[#FDCB2C] pb-3 gap-2">
+                <div>
+                    <span class="text-[11px] sm:text-xs font-bold text-[#149fc0] uppercase tracking-wider block mb-1">Informasi &amp; Pengembang</span>
+                    <h2 class="text-xl sm:text-3xl font-bold font-['Lora',serif] text-[#073C64]">
+                        Tentang Sumber Belajar Matematika
+                    </h2>
+                </div>
+                <a href="tentang.html" class="inline-flex items-center text-xs sm:text-sm font-semibold text-[#149fc0] hover:text-[#073C64] transition">
+                    Halaman Profil Lengkap &rarr;
+                </a>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-start">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
                 <div class="lg:col-span-8 text-xs sm:text-sm text-slate-700 leading-relaxed space-y-3 sm:space-y-4">
                     <p>
-                        Portal <strong>Sumber Belajar Matematika</strong> dikembangkan sebagai wadah pembelajaran matematika terbuka. Platform ini bertujuan memberikan akses luas terhadap materi matematika berkualitas tinggi yang disajikan secara akademis, rapi, dan sistematis.
+                        Portal <strong>Sumber Belajar Matematika</strong> adalah platform edukasi terbuka yang berfokus pada penyajian materi <strong>Matematika SMA (Kelas X, XI, XII)</strong>, pembinaan intensif <strong>Persiapan Olimpiade Sains Nasional (OSN)</strong>, serta pemantapan <strong>Persiapan UTBK - SNBT</strong>.
                     </p>
                     <p>
-                        Setiap modul pembelajaran disusun mengedepankan ketelitian akademis: dimulai dari definisi formal, sifat-sifat dasar aljabar/geometri, teorema terkait, hingga langkah pembuktian dan latihan soal mandiri.
+                        Setiap modul pembelajaran disusun mengedepankan ketelitian akademis: dimulai dari definisi formal, sifat-sifat dasar aljabar dan geometri, pembuktian teorema, hingga pembahasan soal secara analitis berstandar internasional menggunakan notasi LaTeX.
                     </p>
                     
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                        <div class="bg-white p-4 rounded border border-slate-200 shadow-sm">
-                            <h4 class="font-bold font-['Lora',serif] text-[#073C64] text-xs sm:text-sm mb-1 flex items-center">
-                                <span class="w-2 h-2 rounded-full bg-[#FDCB2C] mr-2"></span>
-                                Standar Notasi LaTeX
-                            </h4>
-                            <p class="text-xs text-slate-600">
-                                Seluruh notasi dan persamaan matematik di-render secara dinamis menggunakan MathJax untuk presisi simbolis yang sempurna.
-                            </p>
-                        </div>
-                        <div class="bg-white p-4 rounded border border-slate-200 shadow-sm">
-                            <h4 class="font-bold font-['Lora',serif] text-[#073C64] text-xs sm:text-sm mb-1 flex items-center">
-                                <span class="w-2 h-2 rounded-full bg-[#FDCB2C] mr-2"></span>
-                                Struktur Terorganisir
-                            </h4>
-                            <p class="text-xs text-slate-600">
-                                Dilengkapi dengan daftar isi navigasi langsung (Table of Contents) pada setiap halaman detail materi untuk memudahkan alur belajar.
-                            </p>
-                        </div>
+                    <div class="pt-2 flex flex-wrap gap-3">
+                        <a href="tentang.html" class="inline-flex items-center px-4 py-2.5 bg-[#073C64] hover:bg-[#121F33] text-white text-xs font-semibold rounded transition shadow-sm">
+                            Baca Profil &amp; Visi Pengembang
+                            <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </a>
+                        <a href="#materi" class="inline-flex items-center px-4 py-2.5 bg-white hover:bg-slate-100 text-[#073C64] text-xs font-semibold rounded border border-slate-300 transition">
+                            Lihat Katalog Materi
+                        </a>
                     </div>
                 </div>
 
-                <div class="lg:col-span-4 bg-white p-5 sm:p-6 rounded border border-slate-200 shadow-sm space-y-4">
-                    <h3 class="font-bold font-['Lora',serif] text-[#073C64] text-sm sm:text-base border-b border-slate-200 pb-2">
-                        Ringkasan Platform
-                    </h3>
-                    <dl class="space-y-2.5 text-xs">
-                        <div class="flex justify-between border-b border-slate-100 pb-1.5">
-                            <dt class="text-slate-500">Font Body:</dt>
-                            <dd class="font-semibold text-slate-800">Open Sans</dd>
+                <div class="lg:col-span-4 bg-white p-5 sm:p-6 rounded border border-slate-200 shadow-sm space-y-3">
+                    <div class="flex items-center space-x-3 border-b border-slate-100 pb-3">
+                        <div class="w-12 h-12 rounded-full bg-[#073C64] text-[#FDCB2C] font-bold text-lg flex items-center justify-center flex-shrink-0">
+                            TA
                         </div>
-                        <div class="flex justify-between border-b border-slate-100 pb-1.5">
-                            <dt class="text-slate-500">Font Heading:</dt>
-                            <dd class="font-semibold text-slate-800">Lora (Serif)</dd>
+                        <div>
+                            <h3 class="font-bold font-['Lora',serif] text-[#073C64] text-sm sm:text-base">
+                                Toriq Afanudin
+                            </h3>
+                            <p class="text-xs text-[#149fc0] font-semibold">Pengajar Matematika</p>
                         </div>
-                        <div class="flex justify-between border-b border-slate-100 pb-1.5">
-                            <dt class="text-slate-500">Aksesibilitas:</dt>
-                            <dd class="font-semibold text-[#149fc0]">Bebas & Terbuka</dd>
+                    </div>
+                    <dl class="space-y-2 text-xs text-slate-600">
+                        <div>
+                            <dt class="text-slate-400 font-medium">Alamat:</dt>
+                            <dd class="text-slate-800 font-medium">Desa Kembaran RT.03/RW.02, Kec. Kalikajar, Kab. Wonosobo.</dd>
                         </div>
-                        <div class="flex justify-between">
-                            <dt class="text-slate-500">Status Modul:</dt>
-                            <dd class="font-semibold text-[#149fc0]">2 Modul Aktif + Update</dd>
+                        <div>
+                            <dt class="text-slate-400 font-medium">Email:</dt>
+                            <dd><a href="mailto:toriqafanudin23@gmail.com" class="text-[#149fc0] hover:underline font-medium">toriqafanudin23@gmail.com</a></dd>
                         </div>
                     </dl>
                 </div>
@@ -376,7 +377,7 @@
                         SUMBER BELAJAR MATEMATIKA
                     </div>
                     <p class="text-slate-300 text-xs max-w-md">
-                        Portal Pembelajaran Matematika Akademis. Menyajikan notasi ilmiah dan pembahasan konsep terstruktur.
+                        Portal Pembelajaran Matematika Akademis SMA, Persiapan Olimpiade, dan UTBK.
                     </p>
                 </div>
                 <div class="flex flex-wrap gap-4 text-xs font-semibold">
@@ -384,16 +385,16 @@
                     <span>&bull;</span>
                     <a href="#materi" class="text-slate-200 hover:text-[#FDCB2C] transition">Materi Pelajaran</a>
                     <span>&bull;</span>
-                    <a href="#tentang" class="text-slate-200 hover:text-[#FDCB2C] transition">Tentang</a>
+                    <a href="tentang.html" class="text-slate-200 hover:text-[#FDCB2C] transition">Tentang</a>
                 </div>
             </div>
             
             <div class="flex flex-col sm:flex-row justify-between items-center text-[11px] text-slate-300 gap-2">
                 <div>
-                    &copy; 2026 Sumber Belajar Matematika. Disusun secara ilmiah dan terbuka.
+                    &copy; 2026 Sumber Belajar Matematika. Disusun oleh Toriq Afanudin.
                 </div>
                 <div>
-                    Portal Pembelajaran Matematika Akademis
+                    Kalikajar, Kab. Wonosobo &bull; toriqafanudin23@gmail.com
                 </div>
             </div>
         </div>
