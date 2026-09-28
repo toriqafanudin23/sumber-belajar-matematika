@@ -92,76 +92,47 @@
 </head>
 <body class="bg-white text-[#222222] font-['Open_Sans',sans-serif] min-h-screen flex flex-col overflow-x-hidden">
 
-    <!-- Top Bar -->
-    <div class="topbar-bg text-white text-[11px] sm:text-xs py-2 px-3 sm:px-8 border-b border-blue-900/50">
-        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
-            <div class="flex items-center space-x-2 sm:space-x-4">
-                <span class="font-medium text-slate-200">Sumber Belajar Matematika</span>
-                <span class="text-slate-500">|</span>
-                <span class="text-slate-300 truncate">Portal Pembelajaran Akademis</span>
-            </div>
-            <div class="flex items-center space-x-3 text-slate-300">
-                <span>SMA Kelas X, XI, XII</span>
-                <span class="text-slate-500">&bull;</span>
-                <span>OSN &amp; UTBK</span>
-            </div>
-        </div>
-    </div>
+    <!-- Site Header + Nav (Single Bar) -->
+    <header class="header-bg text-white sticky top-0 z-50 shadow-md border-b-[3px] border-[#FDCB2C]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 flex items-center justify-between h-14 sm:h-16">
 
-    <!-- Main Header Banner -->
-    <header class="header-bg text-white py-4 sm:py-6 px-4 sm:px-8 shadow-md">
-        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4">
-            <div class="flex items-center space-x-3 sm:space-x-4">
-                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded bg-[#121F33] text-[#FDCB2C] font-bold text-xl sm:text-2xl flex items-center justify-center shadow border border-[#FDCB2C]/40 flex-shrink-0">
+            <!-- Brand -->
+            <a href="index.html" class="flex items-center space-x-2.5 sm:space-x-3 group flex-shrink-0">
+                <div class="w-8 h-8 sm:w-9 sm:h-9 rounded bg-[#121F33] text-[#FDCB2C] font-bold text-base sm:text-lg flex items-center justify-center border border-[#FDCB2C]/40 flex-shrink-0">
                     \(\sum\)
                 </div>
-                <div>
-                    <a href="index.html" class="group">
-                        <h1 class="text-xl sm:text-3xl font-bold font-['Lora',serif] text-white tracking-tight group-hover:text-[#FDCB2C] transition leading-snug">
-                            Sumber Belajar Matematika
-                        </h1>
-                    </a>
-                    <p class="text-[11px] sm:text-sm text-slate-200 mt-0.5 font-['Open_Sans',sans-serif]">
-                        Pembahasan Konseptual, Notasi Ilmiah, dan Pembuktian Terstruktur
-                    </p>
+                <div class="leading-tight">
+                    <span class="block font-bold font-['Lora',serif] text-white text-sm sm:text-base group-hover:text-[#FDCB2C] transition tracking-tight">
+                        Sumber Belajar Matematika
+                    </span>
+                    <span class="hidden sm:block text-[10px] text-slate-400 font-normal tracking-wide">
+                        SMA · OSN · UTBK
+                    </span>
                 </div>
-            </div>
-            <div class="hidden md:flex items-center space-x-3 text-xs text-slate-200 bg-[#121F33]/80 px-4 py-2.5 rounded border border-blue-800">
-                <svg class="w-4 h-4 text-[#FDCB2C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden sm:flex items-center space-x-1 text-xs font-bold uppercase tracking-wider">
+                <a href="index.html" class="py-2 px-4 nav-link-active rounded transition">Home</a>
+                <a href="katalog.html" class="py-2 px-4 text-slate-200 nav-link-item rounded transition">Katalog</a>
+                <a href="tentang.html" class="py-2 px-4 text-slate-200 nav-link-item rounded transition">Tentang</a>
+            </nav>
+
+            <!-- Mobile Hamburger -->
+            <button id="mobile-menu-btn" class="sm:hidden p-2 text-[#FDCB2C] hover:bg-blue-900 rounded focus:outline-none min-h-[44px] min-w-[44px] flex items-center justify-center" aria-label="Toggle navigation">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
-                <span>Media Referensi Matematika Akademis</span>
-            </div>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden sm:hidden bg-[#121F33] border-t border-blue-900/60 px-3 py-2 space-y-1">
+            <a href="index.html" class="block py-2.5 px-4 text-[#FDCB2C] font-bold bg-[#073C64] rounded text-xs uppercase tracking-wider">Home</a>
+            <a href="katalog.html" class="block py-2.5 px-4 text-slate-200 hover:text-[#FDCB2C] rounded text-xs uppercase tracking-wider">Katalog</a>
+            <a href="tentang.html" class="block py-2.5 px-4 text-slate-200 hover:text-[#FDCB2C] rounded text-xs uppercase tracking-wider">Tentang</a>
         </div>
     </header>
-
-    <!-- Main Navigation Bar -->
-    <nav class="nav-bg text-white text-sm font-bold shadow-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-8 flex items-center justify-between">
-            <div class="hidden sm:flex items-center space-x-1" id="nav-links">
-                <a href="index.html" class="py-3.5 px-6 nav-link-active transition uppercase tracking-wider">HOME</a>
-                <a href="#materi" class="py-3.5 px-6 text-slate-100 nav-link-item transition uppercase tracking-wider">MATERI</a>
-                <a href="tentang.html" class="py-3.5 px-6 text-slate-100 nav-link-item transition uppercase tracking-wider">TENTANG</a>
-            </div>
-
-            <!-- Mobile Navbar Header Title & Hamburger Button -->
-            <div class="sm:hidden flex items-center justify-between w-full py-2.5">
-                <span class="text-xs font-bold text-[#FDCB2C] tracking-wider uppercase">MENU UTAMA</span>
-                <button id="mobile-menu-btn" class="p-2 text-[#FDCB2C] hover:bg-blue-900 rounded focus:outline-none min-h-[44px] min-w-[44px] flex items-center justify-center" aria-label="Toggle navigation">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        
-        <!-- Mobile Dropdown Navigation Menu -->
-        <div id="mobile-menu" class="hidden sm:hidden bg-[#121F33] border-t border-blue-900 px-3 py-2 space-y-1">
-            <a href="index.html" class="block py-3 px-4 text-[#FDCB2C] font-bold bg-[#073C64] rounded text-xs uppercase tracking-wider">HOME</a>
-            <a href="#materi" class="block py-3 px-4 text-slate-100 hover:text-[#FDCB2C] rounded text-xs uppercase tracking-wider">MATERI</a>
-            <a href="tentang.html" class="block py-3 px-4 text-slate-100 hover:text-[#FDCB2C] rounded text-xs uppercase tracking-wider">TENTANG</a>
-        </div>
-    </nav>
 
     <!-- Hero / Banner Section -->
     <section class="bg-gradient-to-b from-slate-50 to-white py-8 sm:py-12 px-4 sm:px-8 border-b border-slate-200">
@@ -178,7 +149,7 @@
                     Website ini didedikasikan untuk menyediakan materi pembelajaran matematika dengan penulisan ilmiah yang rapi, lugas, dan terstruktur. Disajikan secara jernih dan didukung rendering rumus matematis berbasis <strong>LaTeX / MathJax</strong>.
                 </p>
                 <div class="pt-2 flex flex-col sm:flex-row gap-3">
-                    <a href="#materi" class="inline-flex justify-center items-center px-5 py-3 rounded bg-[#073C64] hover:bg-[#121F33] text-white font-semibold text-xs transition shadow border border-blue-950 w-full sm:w-auto">
+                    <a href="katalog.html" class="inline-flex justify-center items-center px-5 py-3 rounded bg-[#073C64] hover:bg-[#121F33] text-white font-semibold text-xs transition shadow border border-blue-950 w-full sm:w-auto">
                         Eksplorasi Katalog Materi
                         <svg class="w-4 h-4 ml-2 text-[#FDCB2C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -398,7 +369,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                             </svg>
                         </a>
-                        <a href="#materi" class="inline-flex items-center px-4 py-2.5 bg-white hover:bg-slate-100 text-[#073C64] text-xs font-semibold rounded border border-slate-300 transition">
+                        <a href="katalog.html" class="inline-flex items-center px-4 py-2.5 bg-white hover:bg-slate-100 text-[#073C64] text-xs font-semibold rounded border border-slate-300 transition">
                             Lihat Katalog Materi
                         </a>
                     </div>
@@ -446,7 +417,7 @@
                 <div class="flex flex-wrap gap-4 text-xs font-semibold">
                     <a href="index.html" class="text-slate-200 hover:text-[#FDCB2C] transition">Home</a>
                     <span>&bull;</span>
-                    <a href="#materi" class="text-slate-200 hover:text-[#FDCB2C] transition">Materi Pelajaran</a>
+                    <a href="katalog.html" class="text-slate-200 hover:text-[#FDCB2C] transition">Katalog Materi</a>
                     <span>&bull;</span>
                     <a href="tentang.html" class="text-slate-200 hover:text-[#FDCB2C] transition">Tentang</a>
                 </div>

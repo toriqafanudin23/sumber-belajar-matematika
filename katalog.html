@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Katalog Materi Pembelajaran – Sumber Belajar Matematika</title>
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Katalog Materi Pembelajaran – Sumber Belajar Matematika">
+    <meta name="description" content="Jelajahi semua katalog materi pembelajaran matematika SMA (Kelas X, XI, XII), persiapan OSN, dan UTBK-SNBT. Disusun oleh Toriq Afanudin dengan notasi LaTeX ilmiah.">
+    <meta name="keywords" content="katalog materi matematika, materi sma, eksponensial, logaritma, transformasi geometri, osn matematika, utbk snbt, sumber belajar matematika">
+    <meta name="author" content="Toriq Afanudin">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sumberbelajarmatematika.web.id/katalog.html">
+    <meta property="og:title" content="Katalog Materi Pembelajaran – Sumber Belajar Matematika">
+    <meta property="og:description" content="Jelajahi semua modul materi matematika terstruktur: SMA Kelas X-XII, OSN, dan UTBK-SNBT.">
+    <meta property="og:locale" content="id_ID">
+
+    <!-- Google Fonts: Open Sans & Lora -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@600;700&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- MathJax Configuration -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)'], ['$', '$']],
+                displayMath: [['\\[', '\\]'], ['$$', '$$']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        /* Filter button active state */
+        .filter-btn.active {
+            background-color: #073C64;
+            color: #FDCB2C;
+            border-color: #073C64;
+        }
+        .filter-btn {
+            transition: all 0.2s ease-in-out;
+        }
+        .filter-btn:hover:not(.active) {
+            background-color: #f1f5f9;
+            border-color: #073C64;
+            color: #073C64;
+        }
+        /* Badge color variants */
+        .badge-aljabar   { background-color: #dbeafe; color: #1e40af; border-color: #bfdbfe; }
+        .badge-geometri  { background-color: #d1fae5; color: #065f46; border-color: #a7f3d0; }
+        .badge-kalkulus  { background-color: #fef3c7; color: #92400e; border-color: #fde68a; }
+        .badge-statistik { background-color: #ede9fe; color: #4c1d95; border-color: #ddd6fe; }
+        .badge-osn       { background-color: #fee2e2; color: #991b1b; border-color: #fecaca; }
+        .badge-utbk      { background-color: #e0f2fe; color: #0c4a6e; border-color: #bae6fd; }
+
+        /* Card coming soon */
+        .card-coming-soon {
+            opacity: 0.7;
+            pointer-events: none;
+        }
+        /* Progress bar */
+        .progress-bar {
+            height: 4px;
+            background: #e2e8f0;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            border-radius: 2px;
+            background: linear-gradient(90deg, #073C64, #149fc0);
+        }
+    </style>
+</head>
+<body class="bg-white text-[#222222] font-['Open_Sans',sans-serif] min-h-screen flex flex-col overflow-x-hidden">
+
+    <!-- Site Header + Nav (Single Bar) -->
+    <header class="header-bg text-white sticky top-0 z-50 shadow-md border-b-[3px] border-[#FDCB2C]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 flex items-center justify-between h-14 sm:h-16">
+
+            <!-- Brand -->
+            <a href="index.html" class="flex items-center space-x-2.5 sm:space-x-3 group flex-shrink-0">
+                <div class="w-8 h-8 sm:w-9 sm:h-9 rounded bg-[#121F33] text-[#FDCB2C] font-bold text-base sm:text-lg flex items-center justify-center border border-[#FDCB2C]/40 flex-shrink-0">
+                    \(\sum\)
+                </div>
+                <div class="leading-tight">
+                    <span class="block font-bold font-['Lora',serif] text-white text-sm sm:text-base group-hover:text-[#FDCB2C] transition tracking-tight">
+                        Sumber Belajar Matematika
+                    </span>
+                    <span class="hidden sm:block text-[10px] text-slate-400 font-normal tracking-wide">
+                        SMA · OSN · UTBK
+                    </span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden sm:flex items-center space-x-1 text-xs font-bold uppercase tracking-wider">
+                <a href="index.html" class="py-2 px-4 text-slate-200 nav-link-item rounded transition">Home</a>
+                <a href="katalog.html" class="py-2 px-4 nav-link-active rounded transition">Katalog</a>
+                <a href="tentang.html" class="py-2 px-4 text-slate-200 nav-link-item rounded transition">Tentang</a>
+            </nav>
+
+            <!-- Mobile Hamburger -->
+            <button id="mobile-menu-btn" class="sm:hidden p-2 text-[#FDCB2C] hover:bg-blue-900 rounded focus:outline-none min-h-[44px] min-w-[44px] flex items-center justify-center" aria-label="Toggle navigation">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden sm:hidden bg-[#121F33] border-t border-blue-900/60 px-3 py-2 space-y-1">
+            <a href="index.html" class="block py-2.5 px-4 text-slate-200 hover:text-[#FDCB2C] rounded text-xs uppercase tracking-wider">Home</a>
+            <a href="katalog.html" class="block py-2.5 px-4 text-[#FDCB2C] font-bold bg-[#073C64] rounded text-xs uppercase tracking-wider">Katalog</a>
+            <a href="tentang.html" class="block py-2.5 px-4 text-slate-200 hover:text-[#FDCB2C] rounded text-xs uppercase tracking-wider">Tentang</a>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="bg-gradient-to-b from-slate-50 to-white py-8 sm:py-10 px-4 sm:px-8 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto">
+            <!-- Breadcrumb -->
+            <nav class="text-xs text-slate-500 mb-4 flex items-center space-x-1.5">
+                <a href="index.html" class="hover:text-[#073C64] transition">Home</a>
+                <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+                <span class="text-[#073C64] font-semibold">Katalog Materi</span>
+            </nav>
+
+            <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+                <div class="space-y-2">
+                    <div class="inline-flex items-center space-x-2 bg-amber-50 text-[#073C64] text-[11px] sm:text-xs font-semibold px-2.5 py-1 sm:px-3 sm:py-1.5 rounded border border-amber-200">
+                        <span class="w-2 h-2 rounded-full bg-[#FDCB2C]"></span>
+                        <span>Semua Modul Pembelajaran</span>
+                    </div>
+                    <h2 class="text-2xl sm:text-4xl font-bold font-['Lora',serif] text-[#073C64] leading-tight">
+                        Katalog Materi Pembelajaran
+                    </h2>
+                    <p class="text-xs sm:text-sm text-slate-600 max-w-2xl">
+                        Jelajahi seluruh koleksi modul matematika yang tersedia. Gunakan filter kategori atau kotak pencarian untuk menemukan topik yang kamu butuhkan.
+                    </p>
+                </div>
+
+                <!-- Stats Summary -->
+                <div class="flex gap-4 flex-wrap">
+                    <div class="bg-white rounded border border-slate-200 px-4 py-3 text-center shadow-sm min-w-[80px]">
+                        <div class="text-2xl font-bold font-['Lora',serif] text-[#073C64]">2</div>
+                        <div class="text-[10px] text-slate-500 font-semibold uppercase tracking-wider mt-0.5">Modul Tersedia</div>
+                    </div>
+                    <div class="bg-white rounded border border-slate-200 px-4 py-3 text-center shadow-sm min-w-[80px]">
+                        <div class="text-2xl font-bold font-['Lora',serif] text-[#149fc0]">2</div>
+                        <div class="text-[10px] text-slate-500 font-semibold uppercase tracking-wider mt-0.5">Kategori</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Catalog Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-8 py-8 sm:py-12 flex-grow w-full">
+
+        <!-- Filter & Search Bar -->
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 sm:mb-8">
+
+            <!-- Category Filter Buttons -->
+            <div class="flex flex-wrap gap-2" id="filter-buttons">
+                <button data-filter="all" class="filter-btn active text-xs font-semibold px-3 py-1.5 rounded border border-slate-300 bg-[#073C64] text-[#FDCB2C]">
+                    Semua
+                </button>
+                <button data-filter="aljabar" class="filter-btn text-xs font-semibold px-3 py-1.5 rounded border border-slate-300 text-slate-600">
+                    Aljabar Matematika
+                </button>
+                <button data-filter="geometri" class="filter-btn text-xs font-semibold px-3 py-1.5 rounded border border-slate-300 text-slate-600">
+                    Geometri Analitik
+                </button>
+            </div>
+
+            <!-- Search Input -->
+            <div class="w-full md:w-72 flex-shrink-0">
+                <div class="relative">
+                    <input type="text" id="search-input" placeholder="Cari materi matematika..."
+                           class="w-full text-[11px] bg-slate-50 border border-slate-300 rounded px-3 py-2.5 pl-9 focus:outline-none focus:border-[#073C64] focus:bg-white transition shadow-sm">
+                    <svg class="w-4 h-4 text-slate-400 absolute left-3 top-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Info -->
+        <div class="flex items-center justify-between mb-4">
+            <p class="text-xs text-slate-500" id="results-info">Menampilkan <span class="font-semibold text-[#073C64]" id="results-count">6</span> modul</p>
+        </div>
+
+        <!-- No Results Message -->
+        <div id="no-results" class="hidden text-center py-16">
+            <svg class="w-12 h-12 text-slate-300 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <h3 class="text-base font-bold font-['Lora',serif] text-slate-600 mb-1">Materi tidak ditemukan</h3>
+            <p class="text-xs text-slate-400">Coba gunakan kata kunci lain atau ubah filter kategori.</p>
+        </div>
+
+        <!-- Materi Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8" id="materi-grid">
+
+            <!-- ========== CARD 1: Eksponensial & Logaritma ========== -->
+            <article class="materi-card bg-white rounded overflow-hidden flex flex-col justify-between"
+                     data-category="aljabar"
+                     data-tags="eksponensial logaritma pangkat akar fungsi aljabar kelas 10">
+                <div>
+                    <!-- Card Top Banner -->
+                    <div class="bg-slate-100 p-3.5 sm:p-4 border-b border-slate-200 flex justify-between items-center">
+                        <span class="text-[11px] font-bold badge-aljabar px-2.5 py-0.5 rounded border">
+                            Aljabar Matematika
+                        </span>
+                        <span class="text-xs text-slate-500 font-medium">Modul 01</span>
+                    </div>
+
+                    <div class="p-5 sm:p-6 space-y-3 sm:space-y-4">
+                        <!-- Tags -->
+                        <div class="flex flex-wrap gap-1.5">
+                            <span class="text-[10px] bg-slate-100 text-slate-500 px-2 py-0.5 rounded-full">Kelas X</span>
+                            <span class="text-[10px] bg-slate-100 text-slate-500 px-2 py-0.5 rounded-full">SMA</span>
+                            <span class="text-[10px] bg-green-50 text-green-700 border border-green-200 px-2 py-0.5 rounded-full font-semibold">✓ Tersedia</span>
+                        </div>
+
+                        <h3 class="text-lg sm:text-xl font-bold font-['Lora',serif] text-[#073C64]">
+                            <a href="materi/eksponensial.html" class="hover:text-[#149fc0] transition">
+                                Eksponensial dan Logaritma
+                            </a>
+                        </h3>
+
+                        <!-- Math Formula Preview Box -->
+                        <div class="bg-slate-50 p-2.5 sm:p-3 rounded border border-slate-200 text-center text-xs overflow-x-auto my-2">
+                            \[ a^n = \underbrace{a \times a \times \dots \times a}_{n \text{ faktor}} \quad \Big| \quad ^a\log b = c \iff a^c = b \]
+                        </div>
+
+                        <p class="text-xs text-slate-600 leading-relaxed line-clamp-3">
+                            Membahas secara konseptual definisi eksponen, sifat-sifat perkalian dan pembagian pangkat, bentuk akar pecahan, teknik merasionalkan penyebut irasional, fungsi eksponensial, serta hukum logaritma.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="px-5 sm:px-6 pb-5 sm:pb-6 pt-3 border-t border-slate-100 flex items-center justify-between">
+                    <span class="text-[11px] text-slate-400">Terbuka untuk Umum</span>
+                    <a href="materi/eksponensial.html" class="inline-flex items-center text-xs font-semibold text-[#149fc0] hover:text-[#073C64] transition">
+                        Baca Detail Materi
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- ========== CARD 2: Transformasi Geometri ========== -->
+            <article class="materi-card bg-white rounded overflow-hidden flex flex-col justify-between"
+                     data-category="geometri"
+                     data-tags="transformasi geometri translasi refleksi rotasi dilatasi koordinat kartesius kelas 11 12">
+                <div>
+                    <!-- Card Top Banner -->
+                    <div class="bg-slate-100 p-3.5 sm:p-4 border-b border-slate-200 flex justify-between items-center">
+                        <span class="text-[11px] font-bold badge-geometri px-2.5 py-0.5 rounded border">
+                            Geometri Analitik
+                        </span>
+                        <span class="text-xs text-slate-500 font-medium">Modul 02</span>
+                    </div>
+
+                    <div class="p-5 sm:p-6 space-y-3 sm:space-y-4">
+                        <!-- Tags -->
+                        <div class="flex flex-wrap gap-1.5">
+                            <span class="text-[10px] bg-slate-100 text-slate-500 px-2 py-0.5 rounded-full">Kelas XI</span>
+                            <span class="text-[10px] bg-slate-100 text-slate-500 px-2 py-0.5 rounded-full">SMA</span>
+                            <span class="text-[10px] bg-green-50 text-green-700 border border-green-200 px-2 py-0.5 rounded-full font-semibold">✓ Tersedia</span>
+                        </div>
+
+                        <h3 class="text-lg sm:text-xl font-bold font-['Lora',serif] text-[#073C64]">
+                            <a href="materi/transformasi-geometri.html" class="hover:text-[#149fc0] transition">
+                                Transformasi Geometri
+                            </a>
+                        </h3>
+
+                        <!-- Math Formula Preview Box -->
+                        <div class="bg-slate-50 p-2.5 sm:p-3 rounded border border-slate-200 text-center text-xs overflow-x-auto my-2">
+                            \[ \begin{bmatrix} x' \\ y' \end{bmatrix} = \begin{bmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} \]
+                        </div>
+
+                        <p class="text-xs text-slate-600 leading-relaxed line-clamp-3">
+                            Kajian menyeluruh mengenai perpindahan objek pada koordinat kartesius meliputi translasi pergeseran vektor, refleksi matriks pencerminan, rotasi perputaran sudut, dilatasi penskalaan, dan studi kasus irisan bidang.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="px-5 sm:px-6 pb-5 sm:pb-6 pt-3 border-t border-slate-100 flex items-center justify-between">
+                    <span class="text-[11px] text-slate-400">Terbuka untuk Umum</span>
+                    <a href="materi/transformasi-geometri.html" class="inline-flex items-center text-xs font-semibold text-[#149fc0] hover:text-[#073C64] transition">
+                        Baca Detail Materi
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+
+        </div>
+        <!-- End Grid -->
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#073C64] text-slate-200 text-xs py-8 sm:py-10 border-t-4 border-[#FDCB2C]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 space-y-6">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-blue-900 pb-6">
+                <div>
+                    <div class="text-[#FDCB2C] font-bold font-['Lora',serif] text-sm sm:text-base tracking-wide mb-1">
+                        SUMBER BELAJAR MATEMATIKA
+                    </div>
+                    <p class="text-slate-300 text-xs max-w-md">
+                        Portal Pembelajaran Matematika Akademis SMA, Persiapan Olimpiade, dan UTBK.
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-4 text-xs font-semibold">
+                    <a href="index.html" class="text-slate-200 hover:text-[#FDCB2C] transition">Home</a>
+                    <span>&bull;</span>
+                    <a href="katalog.html" class="text-[#FDCB2C]">Katalog Materi</a>
+                    <span>&bull;</span>
+                    <a href="tentang.html" class="text-slate-200 hover:text-[#FDCB2C] transition">Tentang</a>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row justify-between items-center text-[11px] text-slate-300 gap-2">
+                <div>
+                    &copy; 2026 Sumber Belajar Matematika. Disusun oleh Toriq Afanudin.
+                </div>
+                <div>
+                    Kalikajar, Kab. Wonosobo &bull; toriqafanudin23@gmail.com
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript: Mobile Menu + Filter + Search -->
+    <script>
+        // ─── Mobile Navigation Toggle ───────────────────────────────────────
+        const mobileBtn  = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                mobileMenu.classList.toggle('hidden');
+            });
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+            });
+        }
+
+        // ─── Category Filter + Search Logic ────────────────────────────────
+        const searchInput   = document.getElementById('search-input');
+        const materiGrid    = document.getElementById('materi-grid');
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const noResults     = document.getElementById('no-results');
+        const resultsCount  = document.getElementById('results-count');
+
+        let activeFilter = 'all';
+
+        function getVisibleCount() {
+            return Array.from(materiGrid.querySelectorAll('article'))
+                        .filter(c => c.style.display !== 'none').length;
+        }
+
+        function applyFilters() {
+            const query = searchInput ? searchInput.value.trim().toLowerCase() : '';
+            const cards = materiGrid.querySelectorAll('article');
+            let visible = 0;
+
+            cards.forEach(card => {
+                const category = card.dataset.category || '';
+                const tags     = card.dataset.tags     || '';
+                const text     = card.textContent.toLowerCase();
+
+                const matchesFilter = activeFilter === 'all' || category === activeFilter;
+                const matchesSearch = query === '' || text.includes(query) || tags.includes(query);
+
+                if (matchesFilter && matchesSearch) {
+                    card.style.display = 'flex';
+                    card.style.flexDirection = 'column';
+                    visible++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            if (resultsCount) resultsCount.textContent = visible;
+            if (noResults) {
+                noResults.classList.toggle('hidden', visible > 0);
+                materiGrid.style.display = visible > 0 ? '' : 'none';
+            }
+        }
+
+        // Filter button click
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterButtons.forEach(b => {
+                    b.classList.remove('active');
+                    b.style.backgroundColor = '';
+                    b.style.color = '';
+                });
+                btn.classList.add('active');
+                activeFilter = btn.dataset.filter;
+                applyFilters();
+            });
+        });
+
+        // Search input
+        if (searchInput) {
+            searchInput.addEventListener('input', applyFilters);
+        }
+
+        // Initial count
+        applyFilters();
+    </script>
+</body>
+</html>
