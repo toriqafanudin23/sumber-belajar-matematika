@@ -50,6 +50,8 @@
         }
         .filter-btn {
             transition: all 0.2s ease-in-out;
+            font-size: 11px !important;
+            line-height: 1.4;
         }
         .filter-btn:hover:not(.active) {
             background-color: #f1f5f9;
@@ -175,14 +177,14 @@
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 sm:mb-8">
 
             <!-- Category Filter Buttons -->
-            <div class="flex flex-wrap gap-2" id="filter-buttons">
-                <button data-filter="all" class="filter-btn active text-xs font-semibold px-3 py-1.5 rounded border border-slate-300 bg-[#073C64] text-[#FDCB2C]">
+            <div class="flex flex-wrap gap-1.5" id="filter-buttons">
+                <button data-filter="all" class="filter-btn active font-semibold px-2.5 py-1 rounded border border-slate-300 bg-[#073C64] text-[#FDCB2C]">
                     Semua
                 </button>
-                <button data-filter="aljabar" class="filter-btn text-xs font-semibold px-3 py-1.5 rounded border border-slate-300 text-slate-600">
+                <button data-filter="aljabar" class="filter-btn font-semibold px-2.5 py-1 rounded border border-slate-300 text-slate-600">
                     Aljabar Matematika
                 </button>
-                <button data-filter="geometri" class="filter-btn text-xs font-semibold px-3 py-1.5 rounded border border-slate-300 text-slate-600">
+                <button data-filter="geometri" class="filter-btn font-semibold px-2.5 py-1 rounded border border-slate-300 text-slate-600">
                     Geometri Analitik
                 </button>
             </div>
